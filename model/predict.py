@@ -6,7 +6,7 @@ from flair.models import TextClassifier
 from flair.data import Sentence
 import joblib
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
-
+# sentiment analysis
 
 def get_offensive_corpus(path):
     data = pd.read_csv(path)
