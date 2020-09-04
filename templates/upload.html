@@ -1,0 +1,95 @@
+{% extends "layout.html" %} {% block content %}
+<div class="content">
+  <div class="container">
+    <div
+      class="jumbotron"
+      style="margin-top: 50px; margin-bottom: 50px; max-width: 1140px;"
+    >
+      <h1 class="display-3">Text Profanity Prediction</h1>
+      <p>powered by Deep Learning</p>
+    </div>
+
+    <div class="container">
+      <div class="main">
+        <div
+          class="col-md-12"
+          style="
+            background-color: #215794;
+            width: 540px;
+            height: 230px;
+            padding: 2%;
+            float: left;
+          "
+        >
+          <h2 style="color: #fff;">Upload Your Text</h2>
+          <form
+            method="POST"
+            enctype="multipart/form-data"
+            action=""
+            class="form-group"
+          >
+            <div class="form-group">
+              <input type="text" name="text" />
+              <br />
+            </div>
+
+            <input
+              type="submit"
+              value="Submit Text"
+              class="btn btn-primary mb-2"
+            />
+            <input type="reset" value="Reset" class="btn btn-danger mb-2" />
+          </form>
+        </div>
+        <div
+          class="col-md-12"
+          style="
+            background-color: #215794;
+            width: 540px;
+            height: 230px;
+            padding: 2%;
+            float: right;
+          "
+        >
+          <h2 style="color: #fff;">Upload Your Dataset</h2>
+          <p style="color: #fff;">We only accept csv format</p>
+          <form
+            method="POST"
+            enctype="multipart/form-data"
+            action=""
+            class="form-group"
+          >
+            <div class="form-group">
+              <input type="file" name="file" />
+              <br />
+            </div>
+
+            <input
+              type="submit"
+              value="Submit CSV"
+              onclick="myAnalyser()"
+              class="btn btn-primary mb-2"
+            />
+            <input type="reset" value="Reset" class="btn btn-danger mb-2" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %} {% block scripts %}
+<script>
+  function myAnalyser() {
+    document.querySelector(".main div").style.display = "none";
+    //Hide the main division
+    document.querySelector(".main").classList.add("spinner-1");
+    // Server request
+    setTimeout(() => {
+      document.querySelector(".main").classList.remove("spinner-1");
+      //Remove the animation
+      document.querySelector(".main div").style.display = "block";
+      //Show the main division
+    }, 5000); //Number of seconds to last
+  }
+</script>
+{% endblock scripts %}
