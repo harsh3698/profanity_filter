@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Insigts from Data </title>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+*{
+        box-sizing: border-box;
+}
+body {
+  background-image: url('image.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style:none;
+}
+li{
+    float: left;
+}
+
+.container{
+    max-width:100px;
+    margin:auto;
+    background: #f2f2f2;
+    overflow:auto;
+}
+
+
+.desc{
+    padding:15px;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+<div class = "container">
+    <div style = "background-image: url('image.jpg');">
+    </div>
+</div>
+<div class="row">
+    <div class="column">
+      <img src="..\plots\points.png" alt="Points" width = 400px height = 400px >
+        <div class  = "desc">Sub Category</div>
+    </div>
+    <div class="column">
+      <img src="..\plots\bar graph.jpg" alt="sentiment"  width = 400px height = 400px>
+        <div class  = "desc">Sentiment Graph</div>
+    </div>
+    <div class="column">
+      <img src="..\plots\horizontal plot.png" alt="Horizontal Plot"  width = 400px height = 400px>
+        <div class  = "desc">Horizontal Plot</div>
+    </div>
+    <div class="column">
+        <img src="..\plots\pie_chart.jpg" alt="Pie Chart"  width = 400px height = 400px>
+            <div class  = "desc">Pie Chart</div>
+    </div>
+    <div class="column">
+      <img src="..\plots\sub_category_emotions.jpg" alt="Bar graph"  width = 400px height = 400px>
+        <div class  = "desc">Sub Category Emotions</div>
+    </div>
+    <div class="column">
+        <img src="..\plots\word_cloud.jpg" alt="Word Cloud"  width = 400px height = 400px>
+            <div class  = "desc">Word Cloud</div>
+    </div>
+  </div>
+  
+</body>
+</html>
